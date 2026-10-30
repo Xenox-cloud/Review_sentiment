@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Sentiment Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main>
+    <h1>Review Sentiment Analyzer</h1>
+    <p class="sub">Type a customer review. A scikit-learn model labels it positive, negative or neutral, and the result is saved in MongoDB.</p>
+
+    <form id="form" class="card">
+      <textarea id="text" rows="4" maxlength="1000" placeholder="e.g. Delivery was late but the product works great" required></textarea>
+      <button type="submit">Analyze</button>
+    </form>
+
+    <div id="result" class="card hidden"></div>
+    <div id="error" class="error hidden"></div>
+
+    <section class="stats" id="summary"></section>
+
+    <h2>Recent reviews</h2>
+    <ul id="history" class="history"></ul>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
